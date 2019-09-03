@@ -31,11 +31,7 @@ var app = new Vue({
     },
     deleteVideo: function(video) {
       console.log("deleteVideo");
-      for (video in this.videos) {
-        if (video.title === this.title) {
-          this.videos.splice(this.videos.indexOf(video), 1);
-        }
-      }
+      this.videos.splice(video, 1);
     }
   }
 });
