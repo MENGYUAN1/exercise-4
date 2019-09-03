@@ -29,13 +29,13 @@ var app = new Vue({
       };
       this.videos.push(obj);
     },
-    deleteVideo: function(){
-      var obj = {
-        show: true,
-        title: this.newTitle,
-        url: this.newUrl
-      };      
-      this.videos.pop(obj)
+    deleteVideo: function(video) {
+      console.log("deleteVideo");
+      for (video in this.videos) {
+        if (video.title === this.title) {
+          this.videos.splice(this.videos.indexOf(video), 1);
+        }
+      }
     }
   }
 });
