@@ -28,6 +28,14 @@ var app = new Vue({
         url: this.newUrl
       };
       this.videos.push(obj);
+    },
+    deleteVideo: function(){
+      var obj = {
+        show: true,
+        title: this.newTitle,
+        url: this.newUrl
+      };      
+      this.videos.pop(obj)
     }
   }
 });
